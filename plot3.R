@@ -23,5 +23,5 @@ library(ggplot2)
 png("plot3.png", width = 600)
 g <- ggplot(Baltimore_emissions, aes(factor(year), Emissions, fill = type))
 g + geom_bar(stat = "identity") + facet_grid(.~type) + xlab("Year") + 
-  ylab("PM2.5 in Ktons") + ggtitle("Baltimore Emissions by Source type and Year")
+  ylab("PM2.5 in tons") + ggtitle("Baltimore Emissions by Source type and Year")
 dev.off()
