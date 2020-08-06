@@ -17,7 +17,8 @@ library(dplyr)
 Baltimore_vehicles <- subset(NEI, fips == 24510 & type == "ON-ROAD")
 Baltimore_ve <- summarise(group_by(Baltimore_vehicles, year), Emissions=sum(Emissions))
 
-##Plot emissions and save into a .png file:
+##Plot emissions and save into a .png file:ç
+library(ggplot2)
 png("plot5.png", width = 550)
 g <- ggplot(Baltimore_ve, aes(factor(year), Emissions, fill = year))
 g + geom_bar(stat = "identity") + xlab("Year") + ylab("PM2.5 in tons") + 
